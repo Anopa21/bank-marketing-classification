@@ -104,7 +104,7 @@ An "always no" model finds no subscriber but scores accuracy 0.887 on the random
 
 On the random folds, the three models were close (ROC-AUC 0.789 to 0.798, PR-AUC 0.444 to 0.459, against a base rate of 0.113). Class weights changed the behaviour at the 0.5 cut-off and not the ranking: plain logistic regression had precision 0.660 and recall 0.230, the balanced version precision 0.354 and recall 0.621.
 
-On time-ordered folds (train on earlier calls, validate on the next block), the same models showed no measurable skill: ROC-AUC 0.498 to 0.533 and PR-AUC 0.075 to 0.085, against a base rate of 0.071. Within each tenth of the file scored separately, ROC-AUC was 0.51 to 0.54 in the early period, 0.49 to 0.56 in the middle period and about 0.80 in the late period.
+On time-ordered folds (train on earlier calls, validate on the next block), the same models showed no measurable skill: ROC-AUC 0.498 to 0.533 and PR-AUC 0.075 to 0.085, against a base rate of 0.071. , Separately, 5-fold cross-validation with random folds, run inside each of three eras of the file (early, middle and late), gave ROC-AUC of 0.51 to 0.54 in the early era, 0.52 to 0.56 in the middle era and 0.78 to 0.81 in the late era (all 20 features, or without the economic columns; logistic regression and gradient boosting).
 
 ### 6.3 How much of the score is the clock?
 
